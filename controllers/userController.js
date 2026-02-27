@@ -8,12 +8,12 @@ const saveUsers = () => {
 exports.createUser = (req, res) => {
   const { name, email, phone } = req.body;
 
-  if (!name || !email || !phone)
-    return res.status(400).json({ message: "All fields required" });
+  // if (!name || !email || !phone)
+  //   return res.status(400).json({ message: "All fields required" });
 
   const newUser = {
     id: Date.now(),
-    name,
+    name, 
     email,
     phone,
   };

@@ -1,8 +1,8 @@
 
 const express = require("express");
 
-const userRoutes = require("./routes/userRoutes.js"); 
-const walletRoutes = require("./routes/walletRout.js");
+const userRoutes = require("./routes/userRoutes.js");
+const walletRoutes = require("./routes/walletRout");
 
 const app = express();
 
@@ -18,9 +18,9 @@ app.use((req, res) => {
 });
 
 // Global error handler
-app.use((err, req, res, next) => {
-  res.status(500).json({ message: "Internal Server Error" });
-});
+// app.use((err, req, res, next) => {
+//   res.status(500).json({ message: "Internal Server Error" });
+// });
 
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
